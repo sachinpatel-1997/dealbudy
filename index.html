@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+    <style>
+* {
+				margin: 0px;
+				font-family: Helvetica, "Helvetica Neue", Roboto, Noto, Arial, sans-serif;
+			}
+			.searchButton {
+                position: absolute;
+background: white;
+left: 46.33%;
+right: 62.67%;
+top: 7.33%;
+bottom: 86.67%;
+transform:translateY(-50%) ;
+padding: 0px;
+border: none;
+color: #000;
+font-size: 16px;
+}
+			#RootWrapperHeader {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+				background-color: #43DF9A;;
+				box-sizing: border-box;
+				padding: 30px 0px 0px;
+			}
+			
+			#TopHeader {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 95px;
+				box-sizing: border-box;
+			}
+			
+			#Frame9 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 66px;
+				box-sizing: border-box;
+			}
+			
+			#Logo {
+				width: 257px;
+				height: 61px;
+				position: relative;
+			}
+			
+			#TransparentLogoTextAndRound1 {
+				width: 258px;
+				height: 50px;
+				object-fit: cover;
+				position: absolute;
+				left: 0px;
+				top: -0px;
+			}
+			
+			#Frame1 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 20px;
+				width: 628px;
+				box-sizing: border-box;
+			}
+			
+			#InputFieldBase {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				flex: none;
+				gap: 6px;
+				width: 195px;
+				box-sizing: border-box;
+			}
+			
+			#InputWithLabel {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 6px;
+				align-self: stretch;
+				box-sizing: border-box;
+				flex-shrink: 0;
+			}
+			
+			#Input {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				gap: 8px;
+				box-shadow: 0px 1px 2px  rgba(16, 24, 40, 0.05);
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				border-radius: 10px;
+				align-self: stretch;
+				background-color: white;
+				box-sizing: border-box;
+				padding: 13px 20px;
+				flex-shrink: 0;
+                height: 50px;
+			}
+			
+			#Content {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: 1;
+				gap: 8px;
+				width: 131px;
+				box-sizing: border-box;
+			}
+			
+			#MapPin {
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#Icon {
+				object-fit: cover;
+				position: absolute;
+				left: 3px;
+				top: 1px;
+				right: 3px;
+				bottom: 1px;
+			}
+			
+			#Text {
+				color: black;
+				text-overflow: ellipsis;
+				font-size: 16px;
+				font-family: Lexend, sans-serif;
+				font-weight: initial;
+				line-height: 24px;
+				text-align: left;
+				width: 103px;
+				flex: 1;
+			}
+			
+			#ChevronDown {
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#Icon_0001 {
+				object-fit: cover;
+				position: absolute;
+				left: 4px;
+				top: 6px;
+				right: 4px;
+				bottom: 6px;
+			}
+			
+			#InputFieldBase_0001 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				flex: 1;
+				gap: 6px;
+				width: 413px;
+				box-sizing: border-box;
+			}
+			
+			#Content_0001 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: 1;
+			}
+			
+			#Content_0002 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: 1;
+				gap: 8px;
+				width: 349px;
+				box-sizing: border-box;
+			}
+			
+			#Text_0001 {
+				color: rgb(157, 157, 157);
+				text-overflow: ellipsis;
+				font-size: 16px;
+				font-family: Lexend, sans-serif;
+				font-weight: initial;
+				line-height: 24px;
+				text-align: left;
+				width: 353px;
+				flex: 1;
+			}
+			
+			#SearchNormal {
+				width: 16px;
+				height: 16px;
+				position: relative;
+			}
+			
+			#VuesaxLinearSearchNormal {
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			
+			#Vector {
+				object-fit: cover;
+				position: absolute;
+				left: 1px;
+				top: 1px;
+				right: 3px;
+				bottom: 3px;
+			}
+			
+			#Vector_0001 {
+				object-fit: cover;
+				position: absolute;
+				left: 13px;
+				top: 12px;
+				right: 1px;
+				bottom: 1px;
+			}
+			
+			#Vector_0002 {
+				object-fit: cover;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				opacity: 0;
+			}
+			
+			#Frame5 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				flex: none;
+				box-sizing: border-box;
+			}
+			
+			#KiaOraAotearoa {
+				color: white;
+				text-overflow: ellipsis;
+				font-size: 24px;
+				font-family: Lexend, sans-serif;
+				font-weight: initial;
+				line-height: 32px;
+				text-align: left;
+			}
+			
+			#_22Jan2022 {
+				color: white;
+				text-overflow: ellipsis;
+				font-size: 14px;
+				font-family: Lexend, sans-serif;
+				font-weight: initial;
+				line-height: 20px;
+				text-align: right;
+				align-self: stretch;
+				flex-shrink: 0;
+			}
+			
+			#Stripe {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+				align-self: stretch;
+				background-color: rgba(0, 0, 0, 0.05);
+				box-sizing: border-box;
+				padding: 0px 320px;
+				flex-shrink: 0;
+			}
+			
+			#Frame4 {
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 322px;
+				box-sizing: border-box;
+			}
+			
+			#Frame3 {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 30px;
+				box-sizing: border-box;
+			}
+			
+			#ButtonBase {
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 12px;
+				box-sizing: border-box;
+				padding-bottom: 16px;
+				padding-top: 16px;
+				padding-right: 28px;
+			}
+			
+			#Category {
+				width: 24px;
+				height: 24px;
+				position: relative;
+			}
+			
+			#VuesaxLinearCategory {
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			
+			#Vector_0003 {
+				object-fit: cover;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+				right: 14px;
+				bottom: 14px;
+			}
+			
+			#Vector_0004 {
+				object-fit: cover;
+				position: absolute;
+				left: 14px;
+				top: 2px;
+				right: 2px;
+				bottom: 14px;
+			}
+			
+			#Vector_0005 {
+				object-fit: cover;
+				position: absolute;
+				left: 14px;
+				top: 14px;
+				right: 2px;
+				bottom: 2px;
+			}
+			
+			#Vector_0006 {
+				object-fit: cover;
+				position: absolute;
+				left: 2px;
+				top: 14px;
+				right: 14px;
+				bottom: 2px;
+			}
+			
+			#Text_0002 {
+				color: white;
+				text-overflow: ellipsis;
+				font-size: 18px;
+				font-family: Lexend, sans-serif;
+				font-weight: initial;
+				line-height: 28px;
+				text-align: left;
+			}
+			
+			#Shop {
+				width: 24px;
+				height: 24px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#Vector_0008 {
+				width: 22px;
+				height: 20px;
+				position: absolute;
+				left: 1px;
+				top: 2px;
+				right: 1px;
+				bottom: 2px;
+			}
+			
+			#Icon_0002 {
+				object-fit: cover;
+				position: absolute;
+				left: 3px;
+				top: 3px;
+				right: 2px;
+				bottom: 2px;
+			}
+			
+			#Icon_0003 {
+				object-fit: cover;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+				right: 2px;
+				bottom: 2px;
+			}
+			
+			#ButtonBase_0005 {
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+				align-items: center;
+				flex: none;
+				gap: 12px;
+				background-color: rgba(0, 0, 0, 0.05);
+				box-sizing: border-box;
+				padding: 16px 28px;
+			}
+			
+			#Vector_0009 {
+				object-fit: cover;
+				position: absolute;
+				left: 7px;
+				top: 2px;
+				right: 7px;
+				bottom: 12px;
+			}
+			
+			#Vector_0010 {
+				object-fit: cover;
+				position: absolute;
+				left: 3px;
+				top: 15px;
+				right: 3px;
+				bottom: 2px;
+			}
+            .search-box {
+                max-width: unset!important;
+                padding: 0!important;
+                margin-right: 10px;
+                width: 100%;
+            }
+            form{
+                display: block;
+                margin-top: 0em;
+            }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<div id="RootWrapperHeader">
+			<div id="TopHeader">
+				<div id="Frame9">
+					<div id="Logo">
+						<img src="https://www.dealbuddy.co.nz/assets/img/logo.png?v=1"
+			alt="image of TransparentLogoTextAndRound1"
+			id="TransparentLogoTextAndRound1">
+							
+						</img>
+					</div>
+					<div id="Frame1">
+						<div id="InputFieldBase">
+							<div id="InputWithLabel">
+								<div id="Input">
+									<div id="Content">
+										<div id="MapPin">
+											<img src="grida://assets-reservation/images/I4628:51867;4628:51803;1088:11;1037:34233"
+			alt="image of Icon"
+			id="Icon">
+												
+											</img>
+										</div>
+										<span id="Text">
+											Hamilton
+										</span>
+									</div>
+									<div id="ChevronDown">
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51803;1088:280;1027:6770"
+			alt="image of Icon"
+			id="Icon_0001">
+											
+										</img>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div id="InputFieldBase_0001">
+                            <form id="InputWithLabel">
+                               
+                               <input type="text" class="input-search" id="Input"/>
+                               <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                             </button>
+                            </form>
+
+                        </div>
+						<!-- <div id="InputFieldBase_0001">
+							<div id="InputWithLabel">
+								<div id="Input">
+									<div id="Content_0001">
+										<div id="Content_0002" type="text">
+											<span id="Text_0001">
+												Find Your Perfect Sale
+											</span>
+										</div>
+									</div>
+									<div id="SearchNormal">
+										<div id="VuesaxLinearSearchNormal">
+											<div id="VuesaxLinearSearchNormal">
+												<img src="grida://assets-reservation/images/I4628:51867;4628:51804;1088:280;4367:55135"
+			alt="image of Vector"
+			id="Vector">
+													
+												</img>
+												<img src="grida://assets-reservation/images/I4628:51867;4628:51804;1088:280;4367:55136"
+			alt="image of Vector"
+			id="Vector_0001">
+													
+												</img>
+												<img src="grida://assets-reservation/images/I4628:51867;4628:51804;1088:280;4367:55137"
+			alt="image of Vector"
+			id="Vector_0002">
+													
+												</img>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div id="Frame5">
+					<span id="KiaOraAotearoa">
+						Kia Ora, Aotearoa!
+					</span>
+					<span id="_22Jan2022">
+						22 Jan, 2022
+					</span>
+				</div>
+			</div>
+			<div id="Stripe">
+				<div id="Frame4">
+					<div id="Frame3">
+						<div id="ButtonBase">
+							<div id="Category">
+								<div id="VuesaxLinearCategory">
+									<div id="VuesaxLinearCategory">
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51811;1292:158627;4367:55151"
+			alt="image of Vector"
+			id="Vector_0003">
+											
+										</img>
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51811;1292:158627;4367:55152"
+			alt="image of Vector"
+			id="Vector_0004">
+											
+										</img>
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51811;1292:158627;4367:55153"
+			alt="image of Vector"
+			id="Vector_0005">
+											
+										</img>
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51811;1292:158627;4367:55154"
+			alt="image of Vector"
+			id="Vector_0006">
+											
+										</img>
+										<img src="grida://assets-reservation/images/I4628:51867;4628:51811;1292:158627;4367:55155"
+			alt="image of Vector"
+			id="Vector_0002">
+											
+										</img>
+									</div>
+								</div>
+							</div>
+							<span id="Text_0002">
+								Categories
+							</span>
+						</div>
+						<div id="ButtonBase">
+							<div id="Shop">
+								<svg xmlns="http://www.w3.org/2000/svg" id="Vector_0008">
+									<path fill="white" d="M21 0L1 0C0.734784 4.44089e-16 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 2.22045e-16 0.734784 0 1L0 5C0.00173951 5.61894 0.194878 6.2222 0.552938 6.72707C0.910998 7.23193 1.41645 7.61369 2 7.82L2 19C2 19.2652 2.10536 19.5196 2.29289 19.7071C2.48043 19.8946 2.73478 20 3 20L19 20C19.2652 20 19.5196 19.8946 19.7071 19.7071C19.8946 19.5196 20 19.2652 20 19L20 7.82C20.5835 7.61369 21.089 7.23193 21.4471 6.72707C21.8051 6.2222 21.9983 5.61894 22 5L22 1C22 0.734784 21.8946 0.48043 21.7071 0.292893C21.5196 0.105357 21.2652 6.66134e-16 21 0L21 0ZM14 2L16 2L16 5C16 5.26522 15.8946 5.51957 15.7071 5.70711C15.5196 5.89464 15.2652 6 15 6C14.7348 6 14.4804 5.89464 14.2929 5.70711C14.1054 5.51957 14 5.26522 14 5L14 2ZM10 2L12 2L12 5C12 5.26522 11.8946 5.51957 11.7071 5.70711C11.5196 5.89464 11.2652 6 11 6C10.7348 6 10.4804 5.89464 10.2929 5.70711C10.1054 5.51957 10 5.26522 10 5L10 2ZM6 2L8 2L8 5C8 5.26522 7.89464 5.51957 7.70711 5.70711C7.51957 5.89464 7.26522 6 7 6C6.73478 6 6.48043 5.89464 6.29289 5.70711C6.10536 5.51957 6 5.26522 6 5L6 2ZM3 6C2.73478 6 2.48043 5.89464 2.29289 5.70711C2.10536 5.51957 2 5.26522 2 5L2 2L4 2L4 5C4 5.26522 3.89464 5.51957 3.70711 5.70711C3.51957 5.89464 3.26522 6 3 6ZM13 18L9 18L9 14C9 13.4696 9.21071 12.9609 9.58579 12.5858C9.96086 12.2107 10.4696 12 11 12C11.5304 12 12.0391 12.2107 12.4142 12.5858C12.7893 12.9609 13 13.4696 13 14L13 18ZM18 18L15 18L15 14C15 12.9391 14.5786 11.9217 13.8284 11.1716C13.0783 10.4214 12.0609 10 11 10C9.93913 10 8.92172 10.4214 8.17157 11.1716C7.42143 11.9217 7 12.9391 7 14L7 18L4 18L4 7.82C4.36757 7.68356 4.70664 7.48012 5 7.22C5.55002 7.71196 6.26207 7.98393 7 7.98393C7.73793 7.98393 8.44998 7.71196 9 7.22C9.55002 7.71196 10.2621 7.98393 11 7.98393C11.7379 7.98393 12.45 7.71196 13 7.22C13.55 7.71196 14.2621 7.98393 15 7.98393C15.7379 7.98393 16.45 7.71196 17 7.22C17.2934 7.48012 17.6324 7.68356 18 7.82L18 18ZM20 5C20 5.26522 19.8946 5.51957 19.7071 5.70711C19.5196 5.89464 19.2652 6 19 6C18.7348 6 18.4804 5.89464 18.2929 5.70711C18.1054 5.51957 18 5.26522 18 5L18 2L20 2L20 5Z">
+										
+									</path>
+								</svg>
+							</div>
+							<span id="Text_0002">
+								Stores
+							</span>
+						</div>
+						<div id="ButtonBase">
+							<div id="Shop">
+								<img src="grida://assets-reservation/images/I4628:51867;4628:51813;1292:158627;1037:34056"
+			alt="image of Icon"
+			id="Icon_0002">
+									
+								</img>
+							</div>
+							<span id="Text_0002">
+								Sale
+							</span>
+						</div>
+						<div id="ButtonBase">
+							<div id="Shop">
+								<img src="grida://assets-reservation/images/I4628:51867;4780:54079;1292:158627;1037:34252"
+			alt="image of Icon"
+			id="Icon_0003">
+									
+								</img>
+							</div>
+							<span id="Text_0002">
+								Coupons
+							</span>
+						</div>
+						<div id="ButtonBase">
+							<div id="Shop">
+								<img src="grida://assets-reservation/images/I4628:51867;4984:59289;1292:158627;1037:34260"
+			alt="image of Icon"
+			id="Icon_0003">
+									
+								</img>
+							</div>
+							<span id="Text_0002">
+								FAQ
+							</span>
+						</div>
+					</div>
+					<div id="ButtonBase_0005">
+						<div id="Category">
+							<div id="VuesaxLinearCategory">
+								<div id="VuesaxLinearCategory">
+									<img src="grida://assets-reservation/images/I4628:51867;4628:51814;1292:158627;4367:55121"
+			alt="image of Vector"
+			id="Vector_0009">
+										
+									</img>
+									<img src="grida://assets-reservation/images/I4628:51867;4628:51814;1292:158627;4367:55122"
+			alt="image of Vector"
+			id="Vector_0010">
+										
+									</img>
+									<img src="grida://assets-reservation/images/I4628:51867;4628:51814;1292:158627;4367:55123"
+			alt="image of Vector"
+			id="Vector_0002">
+										
+									</img>
+								</div>
+							</div>
+						</div>
+						<span id="Text_0002">
+							Vendor Login
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+  </body>
+</html>
